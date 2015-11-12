@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sidebar Dropdown</title>
+</head>
+<body>
+
+<style>
+  ul.hidden {
+    display:none;
+  }  
+</style>
+  
+  <ul>
+    <li>Item 1</li>
+    <li class="dropdown">Item 2
+      <ul class="hidden">
+        <li>Item 2 - subitem1</li>
+        <li>Item 2 - subitem2</li>
+      </ul>
+    </li>
+    <li>Item 3</li>
+    <li class="dropdown">Item 4
+      <ul class="hidden">
+        <li>Item 4 - subitem1</li>
+        <li>Item 4 - subitem2</li>
+        <li>Item 4 - subitem3</li>
+      </ul>
+    </li>
+    <li>Item 5</li>
+  </ul>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+
+<script>
+  $(function() {
+    $('.dropdown').click(function(){
+      $(this).find('.hidden').toggle();
+    });
+  });  
+</script>
+
+</body>
+</html>
